@@ -8,7 +8,7 @@ describe('RadioButtons component', () => {
   it('renders RadioButtons', () => {
     const wrapper = shallow(
       <Provider store={store}>
-        <RadioButtons />
+        <RadioButtons handleChange={() => {}}/>
       </Provider>
     );
     expect(wrapper).toMatchSnapshot();

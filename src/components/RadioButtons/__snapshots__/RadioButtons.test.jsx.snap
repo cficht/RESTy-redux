@@ -30,6 +30,8 @@ exports[`RadioButtons component renders RadioButtons 1`] = `
     }
   }
 >
-  <RadioButtons />
+  <RadioButtons
+    handleChange={[Function]}
+  />
 </ContextProvider>
 `;

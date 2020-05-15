@@ -41,8 +41,8 @@
 - [] - formSelectors.test
 
 ## services
-- [X] - api (fetch(url, object with headers, body))
-  * [X] - fetchResponse
+- [] - api (fetch(url, object with headers, body))
+  * [] - fetchResponse
 
 # --------------------
 
@@ -54,8 +54,9 @@
 - Initial Display
 - Initial History (HistoryItem)
 - Initial Header
-
+- Initial Auth Dropdown
 - Form state and handlers
+
 - fetchResponse API
 - Display
 - History
@@ -63,9 +64,32 @@
 - localStorage
 - No duplicates
 - Click to load
-- Auth Dropdown
+
 - Styling (Color palette, margin, padding)
 - Styling (fonts, font sizes, font colors)
-- Service Testing
-- Hook Testing
 - Refactor
+
+# 
+
+## State 
+- url: '',
+- method: ''
+- body: ''
+- auth: 'none'
+- username: ''
+- password: ''
+- token: ''
+
+- res: {}
+- requests: []
+
+
+## Handlers
+
+- Form
+* handleChange
+* handleSubmit
+
+- History
+* handleLoad
+* handleReset
