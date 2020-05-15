@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
-// import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { getResponse } from '../../selectors/formSelectors';
 
 const Display = () => {
+  const response = useSelector(getResponse);
+
   return (
     <section>
-      <ReactJson src='' theme="tomorrow" name="Headers"/>
-      <ReactJson src='' theme="tomorrow" name="Response"/>
+      <ReactJson src={response.headers} theme="tomorrow" name="Headers"/>
+      <ReactJson src={response.response} theme="tomorrow" name="Response"/>
     </section>
   );
 };
-
-// Display.propTypes = {};
 
 export default Display;

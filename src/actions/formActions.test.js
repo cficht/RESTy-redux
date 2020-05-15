@@ -9,5 +9,4 @@ describe('formActions testing', () => {
       payload: '<input type="text" placeholder="Enter URL" name="url" value="as">'
     });
   });
-
 });

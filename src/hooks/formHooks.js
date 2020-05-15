@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getUrl, getMethod, getBody, getAuth, getUsername, getPassword, getToken } from '../selectors/formSelectors';
-import { setInput } from '../actions/formActions';
+import { setInput, setResponse } from '../actions/formActions';
 
 export const useForm = () => {
   const dispatch = useDispatch();
@@ -15,6 +15,15 @@ export const useForm = () => {
   const handleChange = (target) => {
     dispatch(setInput(target));
   };
+
+  const handleSubmit = () => {
+    event.preventDefault();
+    const base64 = require('base-64');
+    let headers;
+    if(auth === 'basic') headers = `Basic ${base64.encode(`${username}:${password}`)}`;
+    if(auth === 'bearer') headers = `Bearer ${token}`;
+    dispatch(setResponse(url, method, body, headers));
+  };
   
 
   return {
@@ -25,6 +34,7 @@ export const useForm = () => {
     username,
     password,
     token,
-    handleChange
+    handleChange,
+    handleSubmit
   };
 };

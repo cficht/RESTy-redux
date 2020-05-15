@@ -1,4 +1,4 @@
-import { setInput } from '../actions/formActions';
+import { setInput, setResponse } from '../actions/formActions';
 import reducer from './formReducer';
 
 describe('formReducer testing', () => {
@@ -26,6 +26,17 @@ describe('formReducer testing', () => {
       username: '',
       password: '',
       token: ''
+    });
+  });
+
+  it('handles setting response state', () => {
+    const state = {
+      response: {}
+    };
+    const action = setResponse('api.com', 'GET', null, {});
+    const newState = reducer(state, action);
+    expect(newState).toEqual({
+      response: {}
     });
   });
 });

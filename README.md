@@ -20,9 +20,9 @@
 
 ## components
 - [] - App
-- [] - Form
-- [] - RadioButtons
-- [] - Display
+- [X] - Form
+- [X] - RadioButtons
+- [X] - Display
 - [] - History
 - [] - HistoryItem
 - [] - Header
@@ -41,8 +41,8 @@
 - [] - formSelectors.test
 
 ## services
-- [] - api (fetch(url, object with headers, body))
-  * [] - fetchResponse
+- [X] - request (fetch(url, object with headers, body))
+  * [X] - fetchResponse
 
 # --------------------
 
@@ -56,8 +56,8 @@
 - Initial Header
 - Initial Auth Dropdown
 - Form state and handlers
-
 - fetchResponse API
+- form handle submit
 - Display
 - History
 - Header
@@ -79,8 +79,8 @@
 - username: ''
 - password: ''
 - token: ''
-
 - res: {}
+
 - requests: []
 
 

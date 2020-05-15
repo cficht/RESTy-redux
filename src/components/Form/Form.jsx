@@ -12,12 +12,13 @@ const Form = () => {
     username,
     password,
     token,
-    handleChange
+    handleChange,
+    handleSubmit
   } = useForm();
 
   return (
     <section className={styles.Form}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className={styles.Left}>
           <input type="text" placeholder="Enter URL" name="url" onChange={handleChange} value={url}></input>
           <RadioButtons handleChange={handleChange}/>

@@ -1,4 +1,4 @@
-import { getUrl, getMethod, getBody, getAuth, getUsername, getPassword, getToken } from './formSelectors';
+import { getUrl, getMethod, getBody, getAuth, getUsername, getPassword, getToken, getResponse } from './formSelectors';
 
 
 describe('formActions testing', () => {
@@ -106,5 +106,15 @@ describe('formActions testing', () => {
     };
     const token = getToken(state);
     expect(token).toEqual('asd2343jikh234g234');
+  });
+
+  it('gets a response', () => {
+    const state = {
+      form: {
+        response: {}
+      }
+    };
+    const response = getResponse(state);
+    expect(response).toEqual({});
   });
 });

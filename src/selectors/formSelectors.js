@@ -5,3 +5,5 @@ export const getAuth = state => state.form.auth;
 export const getUsername = state => state.form.username;
 export const getPassword = state => state.form.password;
 export const getToken = state => state.form.token;
+
+export const getResponse = state => state.form.response;
