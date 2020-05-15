@@ -1,0 +1,24 @@
+.Form {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+
+  form {
+    display: flex;
+    width: 100%;
+  }
+
+  .Left {
+    width: 50%;
+    border: 2px solid black;
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  .Right {
+    width: 50%;
+    border: 2px solid black;
+  }
+}

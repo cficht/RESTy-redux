@@ -50,11 +50,11 @@
 - reducer index.js
 - store
 - index.js Provider
-
 - Initial Form (RadioButtons/AuthDropdown)
 - Initial Display
 - Initial History (HistoryItem)
 - Initial Header
+
 - Form state and handlers
 - fetchResponse API
 - Display

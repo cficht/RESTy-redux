@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+display: flex;
+
+  .Left {
+    width: 20%;
+  }
+
+  .Right {
+    width: 80%;
+  }
+
+}
