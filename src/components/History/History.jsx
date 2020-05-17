@@ -1,18 +1,20 @@
 import React from 'react';
 import HistoryItem from '../HistoryItem/HistoryItem';
-// import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { getRequests } from '../../selectors/formSelectors';
 
 const History = () => {
+  const requests = useSelector(getRequests);
+  const requestNodes = requests.map(request => (<HistoryItem key={request.url} url={request.url} method={request.method} body={request.body}/>));
+
   return (
     <>
       <h1>HISTORY</h1>
       <ul>
-        <HistoryItem />
+        {requestNodes}
       </ul>
     </>
   );
 };
-
-// History.propTypes = {};
 
 export default History;

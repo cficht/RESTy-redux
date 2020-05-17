@@ -14,7 +14,7 @@ describe('formActions testing', () => {
     const action = loadRequests();
     expect(action).toEqual({
       type: LOAD_REQUESTS,
-      payload: null
+      payload: []
     });
   });
 });

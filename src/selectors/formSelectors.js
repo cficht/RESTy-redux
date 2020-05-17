@@ -7,3 +7,4 @@ export const getPassword = state => state.form.password;
 export const getToken = state => state.form.token;
 
 export const getResponse = state => state.form.response;
+export const getRequests = state => state.form.requests;

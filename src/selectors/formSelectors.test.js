@@ -1,4 +1,4 @@
-import { getUrl, getMethod, getBody, getAuth, getUsername, getPassword, getToken, getResponse } from './formSelectors';
+import { getUrl, getMethod, getBody, getAuth, getUsername, getPassword, getToken, getResponse, getRequests } from './formSelectors';
 
 
 describe('formActions testing', () => {
@@ -116,5 +116,15 @@ describe('formActions testing', () => {
     };
     const response = getResponse(state);
     expect(response).toEqual({});
+  });
+
+  it('gets requests', () => {
+    const state = {
+      form: {
+        requests: ['req1', 'req2']
+      }
+    };
+    const response = getRequests(state);
+    expect(response).toEqual(['req1', 'req2']);
   });
 });

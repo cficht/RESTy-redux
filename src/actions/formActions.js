@@ -19,6 +19,6 @@ export const loadRequests = () => {
   const savedRequests = JSON.parse(localStorage.getItem('requests'));
   return ({
     type: LOAD_REQUESTS,
-    payload: savedRequests
+    payload: savedRequests ? savedRequests : []
   });
 };
