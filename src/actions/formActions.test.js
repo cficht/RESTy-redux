@@ -1,4 +1,4 @@
-import { setInput, SET_INPUT, loadRequests, LOAD_REQUESTS } from './formActions';
+import { setInput, SET_INPUT, loadRequests, LOAD_REQUESTS, setRequest, SET_REQUEST } from './formActions';
 
 describe('formActions testing', () => {
   it('creates a set input action', () => {
@@ -15,6 +15,14 @@ describe('formActions testing', () => {
     expect(action).toEqual({
       type: LOAD_REQUESTS,
       payload: []
+    });
+  });
+
+  it('creates a set request action', () => {
+    const action = setRequest({ url: 'api.com' });
+    expect(action).toEqual({
+      type: SET_REQUEST,
+      payload: { url: 'api.com' }
     });
   });
 });

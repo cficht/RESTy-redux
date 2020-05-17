@@ -1,4 +1,4 @@
-import { setInput, setResponse } from '../actions/formActions';
+import { setInput, setResponse, loadRequests, setRequest } from '../actions/formActions';
 import reducer from './formReducer';
 
 describe('formReducer testing', () => {
@@ -37,6 +37,48 @@ describe('formReducer testing', () => {
     const newState = reducer(state, action);
     expect(newState).toEqual({
       response: {}
+    });
+  });
+
+  it('handles loading requests state', () => {
+    const state = {
+      requests: []
+    };
+    const action = loadRequests();
+    const newState = reducer(state, action);
+    expect(newState).toEqual({
+      requests: []
+    });
+  });
+
+  it('handles setting input values from a saved request state', () => {
+    const state = {
+      url: '',
+      method: '',
+      body: '',
+      auth: 'none',
+      username: '',
+      password: '',
+      token: ''
+    };
+    const action = setRequest({
+      url: 'api.com',
+      method: 'GET',
+      body: '{ "json": "object" }',
+      auth: 'basic',
+      username: 'chris',
+      password: 'admin',
+      token: ''
+    });
+    const newState = reducer(state, action);
+    expect(newState).toEqual({
+      url: 'api.com',
+      method: 'GET',
+      body: '{ "json": "object" }',
+      auth: 'basic',
+      username: 'chris',
+      password: 'admin',
+      token: ''
     });
   });
 });

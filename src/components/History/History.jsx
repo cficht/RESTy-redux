@@ -5,7 +5,7 @@ import { getRequests } from '../../selectors/formSelectors';
 
 const History = () => {
   const requests = useSelector(getRequests);
-  const requestNodes = requests.map(request => (<HistoryItem key={request.url} url={request.url} method={request.method} body={request.body}/>));
+  const requestNodes = requests.map(request => (<HistoryItem key={`${request.url}/${request.method}/${request.body}`} request={request}/>));
 
   return (
     <>

@@ -20,7 +20,7 @@ const Dropdown = ({ auth, username, password, token, handleChange }) => {
 
   return (
     <>
-      <select name="auth" onChange={handleChange}>
+      <select name="auth" value={auth} onChange={handleChange}>
         <option value="none">None</option>
         <option value="basic">Basic Auth</option>
         <option value="bearer">Bearer Token</option>

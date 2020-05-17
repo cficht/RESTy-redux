@@ -61,11 +61,10 @@
 - Display
 - No duplicates
 - localStorage
-
 - History
 - Click to load
-- Header
 
+- History clear
 - Styling (Color palette, margin, padding)
 - Styling (fonts, font sizes, font colors)
 - Refactor

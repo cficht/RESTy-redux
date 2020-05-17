@@ -22,3 +22,9 @@ export const loadRequests = () => {
     payload: savedRequests ? savedRequests : []
   });
 };
+
+export const SET_REQUEST = 'SET_REQUEST';
+export const setRequest = (request) => ({
+  type: SET_REQUEST,
+  payload: request
+});
