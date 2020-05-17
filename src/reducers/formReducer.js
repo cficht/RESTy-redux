@@ -8,7 +8,8 @@ const initialState = {
   username: '',
   password: '',
   token: '',
-  response: {}
+  response: {},
+  requests: []
 };
 
 export default function reducer(state = initialState, action) {
@@ -17,8 +18,20 @@ export default function reducer(state = initialState, action) {
       state[action.payload.name] = action.payload.value;
       return state;
     case SET_RESPONSE:
-      state.response = action.payload;
-      return state;
+      if(action.payload.ok) {       
+        const newRequest = {
+          url: state.url,
+          method: state.method,
+          body: state.body,
+          auth: state.auth,
+          username: state.username,
+          password: state.password,
+          token: state.token
+        };  
+        const match = state.requests.find(request => JSON.stringify(newRequest) === JSON.stringify(request));
+        if(!match) state.requests = [...state.requests, newRequest];
+      }
+      return { ...state, response: action.payload };
     default:
       return state;
   }

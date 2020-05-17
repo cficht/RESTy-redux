@@ -59,10 +59,11 @@
 - fetchResponse API
 - form handle submit
 - Display
+- No duplicates
+
 - History
 - Header
 - localStorage
-- No duplicates
 - Click to load
 
 - Styling (Color palette, margin, padding)
@@ -80,9 +81,7 @@
 - password: ''
 - token: ''
 - res: {}
-
 - requests: []
-
 
 ## Handlers
 
