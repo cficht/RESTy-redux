@@ -1,4 +1,4 @@
-import { SET_INPUT, SET_RESPONSE } from '../actions/formActions';
+import { SET_INPUT, SET_RESPONSE, LOAD_REQUESTS } from '../actions/formActions';
 
 const initialState = {
   url: '',
@@ -30,8 +30,11 @@ export default function reducer(state = initialState, action) {
         };  
         const match = state.requests.find(request => JSON.stringify(newRequest) === JSON.stringify(request));
         if(!match) state.requests = [...state.requests, newRequest];
+        localStorage.setItem('requests', JSON.stringify(state.requests));
       }
       return { ...state, response: action.payload };
+    case LOAD_REQUESTS:
+      return { ...state, requests: action.payload };
     default:
       return state;
   }

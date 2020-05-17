@@ -60,11 +60,11 @@
 - form handle submit
 - Display
 - No duplicates
+- localStorage
 
 - History
-- Header
-- localStorage
 - Click to load
+- Header
 
 - Styling (Color palette, margin, padding)
 - Styling (fonts, font sizes, font colors)

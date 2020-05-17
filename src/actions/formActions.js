@@ -13,3 +13,12 @@ export const setResponse = (url, method, body, headers) => dispatch => {
       dispatch({ type: SET_RESPONSE, payload: res });
     });
 };
+
+export const LOAD_REQUESTS = 'LOAD_REQUESTS';
+export const loadRequests = () => {
+  const savedRequests = JSON.parse(localStorage.getItem('requests'));
+  return ({
+    type: LOAD_REQUESTS,
+    payload: savedRequests
+  });
+};
