@@ -1,4 +1,4 @@
-import { SET_INPUT, SET_RESPONSE, LOAD_REQUESTS, SET_REQUEST } from '../actions/formActions';
+import { SET_INPUT, SET_RESPONSE, LOAD_REQUESTS, SET_REQUEST, RESET_REQUESTS } from '../actions/formActions';
 
 const initialState = {
   url: '',
@@ -37,6 +37,8 @@ export default function reducer(state = initialState, action) {
       return { ...state, requests: action.payload };
     case SET_REQUEST:
       return { ...state, ...action.payload };
+    case RESET_REQUESTS:
+      return { ...state, requests: [] };
     default:
       return state;
   }

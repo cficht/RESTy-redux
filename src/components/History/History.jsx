@@ -1,10 +1,13 @@
 import React from 'react';
 import HistoryItem from '../HistoryItem/HistoryItem';
-import { useSelector } from 'react-redux';
-import { getRequests } from '../../selectors/formSelectors';
+import { useHistory } from '../../hooks/historyHooks';
 
 const History = () => {
-  const requests = useSelector(getRequests);
+  const {
+    requests,
+    handleReset
+  } = useHistory();
+
   const requestNodes = requests.map(request => (<HistoryItem key={`${request.url}/${request.method}/${request.body}`} request={request}/>));
 
   return (
@@ -13,6 +16,7 @@ const History = () => {
       <ul>
         {requestNodes}
       </ul>
+      <button onClick={handleReset}>Clear</button>
     </>
   );
 };

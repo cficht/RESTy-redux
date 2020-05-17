@@ -1,4 +1,4 @@
-import { setInput, setResponse, loadRequests, setRequest } from '../actions/formActions';
+import { setInput, setResponse, loadRequests, setRequest, resetRequests } from '../actions/formActions';
 import reducer from './formReducer';
 
 describe('formReducer testing', () => {
@@ -79,6 +79,17 @@ describe('formReducer testing', () => {
       username: 'chris',
       password: 'admin',
       token: ''
+    });
+  });
+
+  it('handles reseting requests', () => {
+    const state = {
+      requests: ['req1', 'req2']
+    };
+    const action = resetRequests();
+    const newState = reducer(state, action);
+    expect(newState).toEqual({
+      requests: []
     });
   });
 });

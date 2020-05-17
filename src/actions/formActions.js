@@ -28,3 +28,11 @@ export const setRequest = (request) => ({
   type: SET_REQUEST,
   payload: request
 });
+
+export const RESET_REQUESTS = 'RESET_REQUESTS';
+export const resetRequests = () => {
+  localStorage.clear();
+  return ({
+    type: RESET_REQUESTS
+  });
+};

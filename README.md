@@ -19,26 +19,26 @@
 # --------------------
 
 ## components
-- [] - App
+- [X] - App
 - [X] - Form
 - [X] - RadioButtons
 - [X] - Display
-- [] - History
-- [] - HistoryItem
-- [] - Header
-- [] - AuthDropdown
+- [X] - History
+- [X] - HistoryItem
+- [X] - Header
+- [X] - AuthDropdown
 
 ## actions
-- [] - formActions
-- [] - formActions.test
+- [X] - formActions
+- [X] - formActions.test
 
 ## reducers
-- [] - formReducer
-- [] - formReducer.test
+- [X] - formReducer
+- [X] - formReducer.test
 
 ## selectors
-- [] - formSelectors
-- [] - formSelectors.test
+- [X] - formSelectors
+- [X] - formSelectors.test
 
 ## services
 - [X] - request (fetch(url, object with headers, body))
@@ -63,8 +63,8 @@
 - localStorage
 - History
 - Click to load
-
 - History clear
+
 - Styling (Color palette, margin, padding)
 - Styling (fonts, font sizes, font colors)
 - Refactor
