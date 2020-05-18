@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Dropdown.css';
 
 const Dropdown = ({ auth, username, password, token, handleChange }) => {
   const authType = () => {
@@ -19,7 +20,7 @@ const Dropdown = ({ auth, username, password, token, handleChange }) => {
   };
 
   return (
-    <>
+    <section className={styles.Dropdown}>
       <select name="auth" value={auth} onChange={handleChange}>
         <option value="none">None</option>
         <option value="basic">Basic Auth</option>
@@ -28,7 +29,7 @@ const Dropdown = ({ auth, username, password, token, handleChange }) => {
       <div>
         {authType()}
       </div>
-    </>
+    </section>
   );
 };
 

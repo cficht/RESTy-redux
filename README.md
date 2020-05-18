@@ -67,7 +67,6 @@
 - Click to load
 - History clear
 - Disable body on GET/DELETE
-
 - Styling (Color palette, margin, padding)
 - Styling (fonts, font sizes, font colors)
 - Refactor
