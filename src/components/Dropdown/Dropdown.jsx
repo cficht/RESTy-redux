@@ -33,11 +33,11 @@ const Dropdown = ({ auth, username, password, token, handleChange }) => {
 };
 
 Dropdown.propTypes = {
-  auth: PropTypes.string,
-  username: PropTypes.string,
-  password: PropTypes.string,
-  token: PropTypes.string,
-  handleChange: PropTypes.func
+  auth: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  token: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired
 };
 
 export default Dropdown;

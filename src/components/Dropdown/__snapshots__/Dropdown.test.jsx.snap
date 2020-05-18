@@ -30,6 +30,12 @@ exports[`Dropdown component renders Dropdown 1`] = `
     }
   }
 >
-  <Dropdown />
+  <Dropdown
+    auth="none"
+    handleChange={[Function]}
+    password="admin"
+    token="232fsdfdsf"
+    username="chris"
+  />
 </ContextProvider>
 `;

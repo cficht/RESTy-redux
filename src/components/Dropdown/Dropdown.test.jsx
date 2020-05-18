@@ -8,7 +8,12 @@ describe('Dropdown component', () => {
   it('renders Dropdown', () => {
     const wrapper = shallow(
       <Provider store={store}>
-        <Dropdown />
+        <Dropdown 
+          auth="none"
+          username="chris"
+          password="admin"
+          token="232fsdfdsf"
+          handleChange={() => {}}/>
       </Provider>
     );
     expect(wrapper).toMatchSnapshot();

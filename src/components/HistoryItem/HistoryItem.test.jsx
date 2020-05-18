@@ -8,7 +8,10 @@ describe('HistoryItem component', () => {
   it('renders HistoryItem', () => {
     const wrapper = shallow(
       <Provider store={store}>
-        <HistoryItem />
+        <HistoryItem
+          url="api.com"
+          method="GET"
+          request={{}}/>
       </Provider>
     );
     expect(wrapper).toMatchSnapshot();

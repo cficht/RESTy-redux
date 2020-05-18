@@ -15,9 +15,9 @@ const HistoryItem = ({ request }) => {
 };
 
 HistoryItem.propTypes = {
-  url: PropTypes.string,
-  method: PropTypes.string,
-  request: PropTypes.object
+  url: PropTypes.string.isRequired,
+  method: PropTypes.string.isRequired,
+  request: PropTypes.object.isRequired
 };
 
 export default HistoryItem;

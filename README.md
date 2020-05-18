@@ -1,7 +1,5 @@
 # RESTy Redux
 
-# --------------------
-
 ## Requirements
 * Match the design and overall functionality
   * Input field for entering a URL
@@ -16,7 +14,7 @@
 * Save History in local storage
   * When choosing from history, pre-fill the form
 
-# --------------------
+# 
 
 ## components
 - [X] - App
@@ -26,7 +24,7 @@
 - [X] - History
 - [X] - HistoryItem
 - [X] - Header
-- [X] - AuthDropdown
+- [X] - Dropdown
 
 ## actions
 - [X] - formActions
@@ -40,11 +38,15 @@
 - [X] - formSelectors
 - [X] - formSelectors.test
 
+## hooks
+- [X] - formHooks
+- [X] - historyHooks
+
 ## services
 - [X] - request (fetch(url, object with headers, body))
   * [X] - fetchResponse
 
-# --------------------
+#
 
 ## Steps
 - reducer index.js
@@ -64,6 +66,7 @@
 - History
 - Click to load
 - History clear
+- Disable body on GET/DELETE
 
 - Styling (Color palette, margin, padding)
 - Styling (fonts, font sizes, font colors)

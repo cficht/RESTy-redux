@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getUrl, getMethod, getBody, getAuth, getUsername, getPassword, getToken } from '../selectors/formSelectors';
 import { setInput, setResponse, loadRequests } from '../actions/formActions';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useForm = () => {
   const dispatch = useDispatch();
@@ -12,10 +12,16 @@ export const useForm = () => {
   const username = useSelector(getUsername);
   const password = useSelector(getPassword);
   const token = useSelector(getToken);
+  const [disable, setDisable] = useState(true);
 
   useEffect(() => { 
     dispatch(loadRequests());
   }, []);
+
+  useEffect(() => { 
+    if(method === 'GET' || method === 'DELETE') setDisable(true);
+    else setDisable(false);
+  }, [method]);
 
   const handleChange = (target) => {
     dispatch(setInput(target));
@@ -39,6 +45,7 @@ export const useForm = () => {
     username,
     password,
     token,
+    disable,
     handleChange,
     handleSubmit
   };

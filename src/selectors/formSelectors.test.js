@@ -1,7 +1,7 @@
 import { getUrl, getMethod, getBody, getAuth, getUsername, getPassword, getToken, getResponse, getRequests } from './formSelectors';
 
 
-describe('formActions testing', () => {
+describe('formSelectors testing', () => {
   it('gets a url', () => {
     const state = {
       form: {

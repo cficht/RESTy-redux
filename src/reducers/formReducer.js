@@ -2,7 +2,7 @@ import { SET_INPUT, SET_RESPONSE, LOAD_REQUESTS, SET_REQUEST, RESET_REQUESTS } f
 
 const initialState = {
   url: '',
-  method: '',
+  method: 'GET',
   body: '',
   auth: 'none',
   username: '',

@@ -30,6 +30,10 @@ exports[`HistoryItem component renders HistoryItem 1`] = `
     }
   }
 >
-  <HistoryItem />
+  <HistoryItem
+    method="GET"
+    request={Object {}}
+    url="api.com"
+  />
 </ContextProvider>
 `;
