@@ -1,0 +1,22 @@
+@import '../../styles/variables.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background-color: var(--color-5);
+}
+
+main {
+display: flex;
+
+  .Left {
+    width: 20%;
+  }
+
+  .Right {
+    width: 80%;
+  }
+}
